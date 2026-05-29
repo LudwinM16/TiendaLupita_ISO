@@ -9,24 +9,19 @@ Proyecto desarrollado para la cátedra de **Ingeniería de Software** de la **Un
 
 ## 🚀 Características Principales
 
-* 
-**Gestión de Inventario (CRUD):** Permite registrar, consultar, agregar y editar el stock de productos en tiempo real.
+* **Gestión de Inventario (CRUD):** Permite registrar, consultar, agregar y editar el stock de productos en tiempo real.
 
 
-* 
-**Punto de Venta (POS):** Módulo de ventas con búsqueda rápida de productos, cálculo automático de totales y descuento inmediato de las existencias en inventario.
+* **Punto de Venta (POS):** Módulo de ventas con búsqueda rápida de productos, cálculo automático de totales y descuento inmediato de las existencias en inventario.
 
 
-* 
-**Alertas Visuales Automáticas:** Notificaciones dinámicas y resaltado en color rojo para productos que cuentan con un stock bajo (menos de 3 unidades en existencia).
+* **Alertas Visuales Automáticas:** Notificaciones dinámicas y resaltado en color rojo para productos que cuentan con un stock bajo (menos de 3 unidades en existencia).
 
 
-* 
-**Generación de Reportes:** Capacidad para generar informes de los productos más vendidos y exportarlos en formato PDF.
+* **Generación de Reportes:** Capacidad para generar informes de los productos más vendidos y exportarlos en formato PDF.
 
 
-* 
-**Interfaz Responsiva:** Diseño accesible, moderno e intuitivo, pensado para usuarios sin conocimientos técnicos avanzados.
+* **Interfaz Responsiva:** Diseño accesible, moderno e intuitivo, pensado para usuarios sin conocimientos técnicos avanzados.
 
 
 
@@ -34,24 +29,19 @@ Proyecto desarrollado para la cátedra de **Ingeniería de Software** de la **Un
 
 El proyecto utiliza un entorno de desarrollo basado en tecnologías de fácil acceso y de código abierto:
 
-* 
-**Frontend:** HTML5, CSS3, JavaScript, Bootstrap.
+* **Frontend:** HTML5, CSS3, JavaScript, Bootstrap.
 
 
-* 
-**Backend:** PHP.
+* **Backend:** PHP.
 
 
-* 
-**Base de Datos:** MySQL (gestionada mediante phpMyAdmin).
+* **Base de Datos:** MySQL (gestionada mediante phpMyAdmin).
 
 
-* 
-**Entorno Local:** XAMPP o WAMP.
+* **Entorno Local:** XAMPP o WAMP.
 
 
-* 
-**Despliegue Planificado:** x10hosting (Hosting gratuito).
+* **Despliegue Planificado:** x10hosting (Hosting gratuito).
 
 
 
@@ -78,7 +68,7 @@ Para ejecutar este proyecto en un entorno local, sigue los siguientes pasos:
 
 1. **Clonar el repositorio:**
 ```bash
-git clone https://github.com/tu-usuario/ProyectoFInalDDP.git
+git clone https://github.com/tu-usuario/TiendaLupita_ISO.git
 
 ```
 
@@ -107,7 +97,7 @@ git clone https://github.com/tu-usuario/ProyectoFInalDDP.git
 
 
 5. **Ejecutar el sistema:**
-* Abre tu navegador web e ingresa a `http://localhost/ProyectoFInalDDP/index.html`.
+* Abre tu navegador web e ingresa a `http://localhost/TiendaLupita_ISO/index.html`.
 
 
 
@@ -115,24 +105,19 @@ git clone https://github.com/tu-usuario/ProyectoFInalDDP.git
 
 Este sistema fue desarrollado bajo el marco de trabajo **Scrum** por el siguiente equipo universitario:
 
-* 
-**Herbert William Solano Vasquez** - *Scrum Master / Gestor del Proyecto* 
+* **Herbert William Solano Vasquez** - *Scrum Master / Gestor del Proyecto* 
 
 
-* 
-**Carlos Adalberto Campos Hernandez** - *Product Owner / Analista de Sistemas* 
+* **Carlos Adalberto Campos Hernandez** - *Product Owner / Analista de Sistemas* 
 
 
-* 
-**Fernando David Juarez Dimas** - *Desarrollador Front End y Diseñador UI/UX* 
+* **Fernando David Juarez Dimas** - *Desarrollador Front End y Diseñador UI/UX* 
 
 
-* 
-**Ludwin Enrique Martinez Alfaro** - *Desarrollador Backend* 
+* **Ludwin Enrique Martinez Alfaro** - *Desarrollador Backend* 
 
 
-* 
-**Roger Eduardo Vasquez Portillo** - *Administrador de Base de Datos y Control de Calidad (QA)* 
+* **Roger Eduardo Vasquez Portillo** - *Administrador de Base de Datos y Control de Calidad (QA)* 
 
 
 
