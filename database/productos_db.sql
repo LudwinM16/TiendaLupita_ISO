@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2026 a las 07:00:15
+-- Tiempo de generación: 30-05-2026 a las 06:20:28
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,7 +41,13 @@ CREATE TABLE `detalle_ventas` (
 --
 
 INSERT INTO `detalle_ventas` (`id`, `venta_id`, `producto_id`, `cantidad`, `precio_unitario`, `subtotal`) VALUES
-(1, 1, 38, 3, 0.00, 0.00);
+(3, 3, 37, 1, 6.50, 6.50),
+(4, 3, 39, 1, 5.50, 5.50),
+(5, 4, 39, 2, 5.50, 11.00),
+(6, 5, 39, 3, 5.50, 16.50),
+(7, 6, 39, 7, 5.50, 38.50),
+(8, 6, 36, 3, 2.80, 8.40),
+(9, 7, 35, 10, 4.80, 48.00);
 
 -- --------------------------------------------------------
 
@@ -92,11 +98,11 @@ INSERT INTO `productos` (`id`, `nombre`, `precio`, `cantidad`, `fecha_creacion`)
 (32, 'Harina de Trigo 1kg', 3.00, 11, '2025-11-14 04:39:38'),
 (33, 'Vinagre 500ml', 2.50, 10, '2025-11-14 04:39:38'),
 (34, 'Salsa de Tomate', 3.20, 9, '2025-11-14 04:39:38'),
-(35, 'Mayonesa 500g', 4.80, 12, '2025-11-14 04:39:38'),
-(36, 'Mostaza', 2.80, 10, '2025-11-14 04:39:38'),
-(37, 'Detergente Líquido', 6.50, 1, '2025-11-14 04:39:38'),
+(35, 'Mayonesa 500g', 4.80, 2, '2025-11-14 04:39:38'),
+(36, 'Mostaza', 2.80, 7, '2025-11-14 04:39:38'),
+(37, 'Detergente Líquido', 6.50, 10, '2025-11-14 04:39:38'),
 (38, 'Jabón de Baño', 1.80, 19, '2025-11-14 04:39:38'),
-(39, 'Shampoo', 5.50, 5, '2025-11-14 04:39:38');
+(39, 'Shampoo', 5.50, 13, '2025-11-14 04:39:38');
 
 -- --------------------------------------------------------
 
@@ -116,7 +122,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `password`, `rol`) VALUES
-(1, 'LupitaADM', '$2b$12$nlrbVJuk9It8t3ySQRj6vu1dnT5cN.tYRIQTCYvX78n9xDNjyf.ja', 'admin');
+(1, 'LupitaADM', '$2b$12$nlrbVJuk9It8t3ySQRj6vu1dnT5cN.tYRIQTCYvX78n9xDNjyf.ja', 'admin'),
+(2, 'tilin', '$2y$10$RwqhZHxTYPKD5VPYJkTvnOi3fg9eW360oWo1yiGPjt5pGpMtVG5UC', 'empleado');
 
 -- --------------------------------------------------------
 
@@ -135,7 +142,11 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id`, `total`, `fecha`) VALUES
-(1, 0.00, '2026-05-29 04:53:18');
+(3, 12.00, '2026-05-29 05:40:31'),
+(4, 11.00, '2026-05-29 05:42:54'),
+(5, 16.50, '2026-05-29 05:48:32'),
+(6, 46.90, '2026-05-30 03:46:50'),
+(7, 48.00, '2026-05-30 03:58:23');
 
 --
 -- Índices para tablas volcadas
@@ -176,25 +187,25 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `detalle_ventas`
 --
 ALTER TABLE `detalle_ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
