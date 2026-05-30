@@ -1,5 +1,6 @@
 let CART = []; // {id, nombre, precio, cantidadActual, descontar}
 let alertaMostrada = false; // Variable global para controlar que la alerta de inicio se muestre solo 1 vez
+let PRODUCTOS = []; // Lista completa de productos (para el buscador en tiempo real)
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
@@ -40,6 +41,12 @@ async function initApp(){
   // si admin, cargar usuarios
   if(sess.user.rol === 'admin') {
     cargarUsuarios();
+  }
+
+  // Buscador de productos en tiempo real
+  const buscador = document.getElementById('buscadorProducto');
+  if(buscador){
+    buscador.addEventListener('input', renderProductosFiltrados);
   }
 
   // eventos productos
@@ -188,7 +195,8 @@ async function initApp(){
 async function cargarProductos(){
   const productos = await Model.listarProductos();
   if(Array.isArray(productos)) {
-    View.renderProducts(productos);
+    PRODUCTOS = productos; // guardamos la lista completa para el buscador
+    renderProductosFiltrados();
     
     // Alerta emergente de stock bajo al iniciar sesión
     if(!alertaMostrada) {
@@ -210,6 +218,16 @@ async function cargarProductos(){
     }
     View.updateCartCount(CART.length);
   }
+}
+
+// Filtra PRODUCTOS según el texto del buscador y renderiza el resultado
+function renderProductosFiltrados(){
+  const buscador = document.getElementById('buscadorProducto');
+  const term = buscador ? buscador.value.toLowerCase().trim() : '';
+  const filtrados = term
+    ? PRODUCTOS.filter(p => p.nombre.toLowerCase().includes(term))
+    : PRODUCTOS;
+  View.renderProducts(filtrados);
 }
 
 async function cargarUsuarios(){
