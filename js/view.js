@@ -62,7 +62,7 @@ const View = {
     const btn = document.querySelector('#productForm button[type="submit"]');
     if (btn) { btn.textContent = 'Guardar'; btn.classList.replace('btn-primary', 'btn-success'); }
     const titulo = document.getElementById('formProductoTitulo');
-    if (titulo) titulo.textContent = 'Agregar / Editar Producto';
+    if (titulo) titulo.textContent = 'Agregar Producto';
   },
 
   fillProductForm(p){
@@ -76,9 +76,19 @@ const View = {
     if (btn) { btn.textContent = 'Actualizar'; btn.classList.replace('btn-success', 'btn-primary'); }
     const titulo = document.getElementById('formProductoTitulo');
     if (titulo) titulo.textContent = 'Editando: ' + p.nombre;
-    const nameInput = document.getElementById('productName');
-    nameInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    nameInput.focus();
+
+    this.showProductModal();
+  },
+
+  // Abre el pop-up (modal) del formulario de producto
+  showProductModal(){
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('productoModal')).show();
+  },
+
+  // Cierra el pop-up del formulario de producto
+  hideProductModal(){
+    const modal = bootstrap.Modal.getInstance(document.getElementById('productoModal'));
+    if (modal) modal.hide();
   },
 
   updateCartCount(count){

@@ -49,6 +49,23 @@ async function initApp(){
     buscador.addEventListener('input', renderProductosFiltrados);
   }
 
+  // Botón para abrir el pop-up de "Agregar Producto"
+  const agregarProductoBtn = document.getElementById('agregarProductoBtn');
+  if(agregarProductoBtn){
+    agregarProductoBtn.addEventListener('click', ()=>{
+      View.clearProductForm();
+      View.showProductModal();
+    });
+  }
+
+  // Al terminar de abrirse el pop-up, enfocar el campo Nombre
+  const productoModalEl = document.getElementById('productoModal');
+  if(productoModalEl){
+    productoModalEl.addEventListener('shown.bs.modal', ()=>{
+      document.getElementById('productName').focus();
+    });
+  }
+
   // eventos productos
   document.getElementById('productForm').addEventListener('submit', async e=>{
     e.preventDefault();
@@ -64,6 +81,7 @@ async function initApp(){
     } else {
       await Model.agregarProducto(nombre,precio,cantidad);
     }
+    View.hideProductModal();
     View.clearProductForm();
     cargarProductos();
   });
